@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <div class="calculator">
-      <input type="text" id="display" readonly>
-      <div class="buttons">
-        <button onclick="clearDisplay()">C</button>
-        <button onclick="appendToDisplay('7')">7</button>
-        <button onclick="appendToDisplay('8')">8</button>
-        <button onclick="appendToDisplay('9')">9</button>
-        <button class="operator" onclick="appendToDisplay('+')">+</button>
-        <button onclick="appendToDisplay('4')">4</button>
-        <button onclick="appendToDisplay('5')">5</button>
-        <button onclick="appendToDisplay('6')">6</button>
-        <button class="operator" onclick="appendToDisplay('-')">-</button>
-        <button onclick="appendToDisplay('1')">1</button>
-        <button onclick="appendToDisplay('2')">2</button>
-        <button onclick="appendToDisplay('3')">3</button>
-        <button class="operator" onclick="appendToDisplay('*')">*</button>
-        <button onclick="appendToDisplay('0')">0</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button class="operator" onclick="calculateResult()">=</button>
-        <button class="operator" onclick="appendToDisplay('/')">/</button>
-      </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A clean, responsive calculator built with HTML, CSS, and JavaScript.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Calculator | TM Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculator" aria-label="Calculator">
+    <input type="text" id="display" aria-label="Calculator display" inputmode="decimal" readonly placeholder="0">
+    <div class="buttons">
+      <button type="button" class="clear" onclick="clearDisplay()" aria-label="Clear">AC</button>
+      <button type="button" onclick="deleteLast()" aria-label="Delete last character">DEL</button>
+      <button type="button" onclick="appendToDisplay('%')" aria-label="Percent">%</button>
+      <button type="button" class="operator" onclick="appendToDisplay('/')" aria-label="Divide">÷</button>
+      <button type="button" onclick="appendToDisplay('7')">7</button>
+      <button type="button" onclick="appendToDisplay('8')">8</button>
+      <button type="button" onclick="appendToDisplay('9')">9</button>
+      <button type="button" class="operator" onclick="appendToDisplay('*')" aria-label="Multiply">×</button>
+      <button type="button" onclick="appendToDisplay('4')">4</button>
+      <button type="button" onclick="appendToDisplay('5')">5</button>
+      <button type="button" onclick="appendToDisplay('6')">6</button>
+      <button type="button" class="operator" onclick="appendToDisplay('-')">−</button>
+      <button type="button" onclick="appendToDisplay('1')">1</button>
+      <button type="button" onclick="appendToDisplay('2')">2</button>
+      <button type="button" onclick="appendToDisplay('3')">3</button>
+      <button type="button" class="operator" onclick="appendToDisplay('+')">+</button>
+      <button type="button" onclick="appendToDisplay('0')">0</button>
+      <button type="button" onclick="appendToDisplay('.')">.</button>
+      <button type="button" onclick="appendToDisplay('(')">(</button>
+      <button type="button" class="operator" onclick="calculateResult()">=</button>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </main>
+  <script src="script.js"></script>
+</body>
 </html>
